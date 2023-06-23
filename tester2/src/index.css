@@ -1,0 +1,116 @@
+#forroot {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-size: 200% 200%;
+    background-image: linear-gradient(45deg, #1c1c1c, #000000, #0e0e0e, #000000);
+    animation: gradient 15s ease infinite;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(to right, #1c1c1c, #000000);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+nav a:hover {
+    background-color: #000000;
+    color: #ffdd57;
+}
+
+#container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #ffffff;
+}
+
+#welcome h1 {
+    color: #ffffff;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#welcome h5 {
+    color: #cfd8dc;
+    font-size: 1.2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    line-height: 1.5;
+}
+
+#welcome {
+    margin-top: 30px;
+    width: 400px;
+}
+
+
+/* Your existing CSS */
+
+#animated-section {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    transform: translateX(-100%);
+    transition: transform 1s ease-out;
+}
+
+#avatar {
+    width: 300px;
+    height: 300px;
+}
+
+#text {
+    margin-top: 110px;
+    transform: translateX(100%);
+    transition: transform 1s ease-out;
+}
+
+.hide-on-scroll {
+    opacity: 0;
+}
+
+#text {
+    width: 200px;
+}

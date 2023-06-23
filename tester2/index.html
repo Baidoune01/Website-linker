@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+    <link rel="stylesheet" href="src/index.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#newsfeed">Newsfeed</a></li>
+            <li><a href="#virtual-rooms">Virtual Rooms</a></li>
+            <li><a href="#events-calendar">Events Calendar</a></li>
+            <li><a href="#donations">Donations</a></li>
+        </ul>
+    </nav>
+
+    <div id="container">
+        <div id="forroot">
+            <div id="welcome">
+                <h1>Welcome to Connecting Canton</h1>
+                <h5>the website that has everything you need for the grassroots African-American community events, local business advertising, and (virtual) interactive engagement</h5>
+            </div>
+            <div id="root"></div>
+        </div>
+
+        <div id="animated-section" class="hide-on-scroll">
+            <img id="avatar" src="point.png" alt="Avatar" />
+            <h3 id="text">This site is all about working together and collaborating.</h3>
+        </div>
+
+    </div>
+
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+        window.addEventListener('scroll', () => {
+            const animatedSection = document.getElementById('animated-section');
+            const position = animatedSection.getBoundingClientRect();
+
+            if (position.top < window.innerHeight && position.bottom >= 0) {
+                animatedSection.classList.remove('hide-on-scroll');
+                animatedSection.style.transform = 'translateX(0)';
+                document.getElementById('text').style.transform = 'translateX(0)';
+            }
+        });
+    </script>
+</body>
+
+</html>
