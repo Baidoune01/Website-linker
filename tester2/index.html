@@ -11,6 +11,9 @@
 
 <body>
     <nav>
+        <div>
+            <li><img src="logo.png" width="90px" height="90px"></li>
+        </div>
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#newsfeed">Newsfeed</a></li>
@@ -30,25 +33,30 @@
         </div>
 
         <div id="animated-section" class="hide-on-scroll">
-            <img id="avatar" src="point.png" alt="Avatar" />
-            <h3 id="text">This site is all about working together and collaborating.</h3>
+            <div id="root1"></div>
+            <div id="nvm">
+                <h3 id="text">This site is all about working together and collaborating.</h3>
+            </div>
         </div>
 
+        <div id="part3">
+            <div id="image-container">
+                <img src="image1.jpg" alt="Image 1">
+            </div>
+            <div class="form-container">
+                <h2>Enter Your Phone Number</h2>
+                <form>
+                    <div style="position: relative;">
+                        <input type="tel" placeholder="Phone Number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                    </div>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
     </div>
-
+    <script type="module" src="/src1/main1.jsx"></script>
     <script type="module" src="/src/main.jsx"></script>
-    <script>
-        window.addEventListener('scroll', () => {
-            const animatedSection = document.getElementById('animated-section');
-            const position = animatedSection.getBoundingClientRect();
 
-            if (position.top < window.innerHeight && position.bottom >= 0) {
-                animatedSection.classList.remove('hide-on-scroll');
-                animatedSection.style.transform = 'translateX(0)';
-                document.getElementById('text').style.transform = 'translateX(0)';
-            }
-        });
-    </script>
 </body>
 
 </html>
