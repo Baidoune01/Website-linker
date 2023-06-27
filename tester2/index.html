@@ -1,66 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-    <link rel="stylesheet" href="src/index.css">
+    <title>Your Landing Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        #video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+        
+        #video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        #link-container {
+            align-items: center;
+            width: 200px;
+            height: 80px;
+        }
+        
+        #link-container a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
 
 <body>
-    <nav>
-        <div>
-            <li><img src="logo.png" width="90px" height="90px"></li>
-        </div>
-        <ul>
-            <li><a href="OthersPages/home.php">Home</a></li>
-            <li><a href="#newsfeed">Newsfeed</a></li>
-            <li><a href="#virtual-rooms">Virtual Rooms</a></li>
-            <li><a href="#events-calendar">Events Calendar</a></li>
-            <li><a href="#donations">Donations</a></li>
-        </ul>
-    </nav>
-
-    <div id="container">
-        <div id="forroot">
-            <div id="welcome">
-                <h1>Welcome to Connecting Canton</h1>
-                <h5>the website that has everything you need for the grassroots African-American community events, local business advertising, and (virtual) interactive engagement</h5>
-            </div>
-            <div id="root"></div>
-        </div>
-
-        <div id="animated-section" class="hide-on-scroll">
-            <div id="root1"></div>
-            <div id="nvm">
-                <h3 id="text">This site is all about working together and collaborating.</h3>
-            </div>
-        </div>
-
-        <div id="part3">
-            <div id="image-container">
-                <img src="image1.jpg" alt="Image 1">
-            </div>
-            <div class="form-container">
-                <h2>Enter Your Phone Number</h2>
-                <form>
-                    <div style="position: relative;">
-                        <input type="tel" placeholder="Phone Number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
-                    </div>
-                    <input type="submit" value="Submit">
-                </form>
-            </div>
-        </div>
+    <div id="video-container">
+        <video autoplay loop muted>
+            <source src="vd.mp4" type="video/mp4">
+        </video>
     </div>
-    <script src="https://threejs.org/build/three.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.1.2/chroma.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script type="module" src="/src1/main1.jsx"></script>
-    <script type="module" src="/src/main.jsx"></script>
 
+    <div id="link-container">
+        <a href="home.html"></a>
+    </div>
 </body>
 
 </html>
